@@ -7,6 +7,7 @@
 - Общее
     - [Роли системы](./docs/common/roles.md)
 - Use-кейсы
+    - [Общие](./docs/use_cases/common.md)
     - Front-офис
         - [Менеджер по продажам](./docs/use_cases/front_office/manager.md)
         - [Старший менеджер](./docs/use_cases/front_office/senior_manager.md)
