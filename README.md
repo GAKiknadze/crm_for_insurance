@@ -17,8 +17,8 @@
         - [Юрист](./docs/use_cases/back_office/lawyer.md)
         - [Специалист по продукту](./docs/use_cases/back_office/product_specialist.md)
     - Аналитика и контроль
-        - [Бизнес-аналитик]()
-        - [Финансовый контроллер]()
-        - [Риск-менеджер]()
+        - [Бизнес-аналитик](./docs/use_cases/analytics/business_analyst.md)
+        - [Финансовый контроллер](./docs/use_cases/analytics/financial_controller.md)
+        - [Риск-менеджер](./docs/use_cases/analytics/risk_manager.md)
     - Административные и технические роли
-        - [Администратор CRM]()
+        - [Администратор CRM](./docs/use_cases/admin/crm_admin.md)
