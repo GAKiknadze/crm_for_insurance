@@ -33,6 +33,6 @@ jobs:
       - uses: tokusumi/markdown-embed-code@main
         with:
           # markdown: "README.md"
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.crm_for_insurance_github_token}}
           message: "synchronizing Markdown files"
           silent: true
