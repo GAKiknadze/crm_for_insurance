@@ -1,25 +1,27 @@
 C4Context
     title "System context diagram for a CRM system"
     
-    Enterprise_Boundary(front_office, "Фронт-офис") {
-        Person(manager, "Менеджер по продажам")
-        Person(senior_manager, "Старший менеджер по продажам")
-        Person(head_manager, "Начальник отдела продаж")
+    Boundary(users, "Пользователи", "") {
+        Person(front_office, "Фронт-офис")
+        Person(back_office, "Бэк-офис")
+        Person(analytics, "Бэк-офис")
+        Person(admin, "Административные и технические роли")
     }
 
-    Enterprise_Boundary(back_office, "Бэк-офис") {
-        Person(underwriter, "Андеррайтер")
-        Person(transaction_support, "Сотрудник отдела сопровождения сделок")
-        Person(lawyer, "Юрист")
-        Person(product_specialist, "Специалист по продукту")
+    System_Boundary(system, "Пользователи", "") {
+        System(crm_system, "CRM - система")
+        SystemDb(crm_db, "База данных CRM-системы")
+        SystemQueue(crm_broker, "Брокер сообщений CRM-системы")
+        
+        BiRel(crm_system, crm_db, "")
+        BiRel(crm_system, crm_broker, "")
     }
 
-    Enterprise_Boundary(analytics, "Бэк-офис") {
-        Person(business_analyst, "Бизнес-аналитик")
-        Person(financial_controller, "Финансовый контроллер")
-        Person(risk_manager, "Риск-менеджер")
-    }
 
-    Enterprise_Boundary(admin, "Административные и технические роли") {
-        Person(crm_admin, "Контекстная диаграмма")
-    }
+
+    BiRel(front_office, crm_system, "")
+    BiRel(back_office, crm_system, "")
+    BiRel(analytics, crm_system, "")
+    BiRel(admin, crm_system, "")
+
+    UpdateLayoutConfig($c4ShapeInRow="2", $c4BoundaryInRow="1")
